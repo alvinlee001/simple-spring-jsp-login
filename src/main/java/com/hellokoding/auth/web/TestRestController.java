@@ -21,7 +21,7 @@ import java.util.Map;
 @RestController
 public class TestRestController {
 
-    @CrossOrigin(origins = "http://localhost", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:9615", allowedHeaders = "*")
     @GetMapping("/test/endpoint")
     public Map<String, String> testEndpoint() {
         Map<String, String> result = new HashMap();
