@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class TestRestController {
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/test/endpoint")
     public Map<String, String> testEndpoint() {
         Map<String, String> result = new HashMap();
