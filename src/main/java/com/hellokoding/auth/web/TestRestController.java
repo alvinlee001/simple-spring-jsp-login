@@ -21,7 +21,7 @@ import java.util.Map;
 @RestController
 public class TestRestController {
 
-    @CrossOrigin(origins = "node-load-balancer-2068542005.ap-southeast-1.elb.amazonaws.com", allowedHeaders = "*")
+    @CrossOrigin(origins = { "http://node-load-balancer-2068542005.ap-southeast-1.elb.amazonaws.com" }, allowedHeaders = "*", allowCredentials = "true")
     @GetMapping("/test/endpoint")
     public Map<String, String> testEndpoint() {
         Map<String, String> result = new HashMap();
